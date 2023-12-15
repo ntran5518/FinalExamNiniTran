@@ -1,0 +1,201 @@
+/* Nini Tran */
+/* 8855518 */
+
+html {
+  font: 20px/1.5 sans-serif;
+}
+
+header,
+footer {
+  background: linear-gradient(to bottom, #f9f6f6, #034e87);
+  padding: 0.5rem 0;
+  text-align: center;
+  color: white;
+}
+
+body {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0.25rem auto;
+  box-shadow: 0 0 0.5rem black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+header,
+footer {
+  background-color: #4177a4;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+nav {
+  background-color: rgb(3, 43, 75);
+  padding: 0.25rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-variant: small-caps;
+}
+
+main h2 {
+  color: #113253;
+  font-size: 1.5rem;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+aside h2 {
+  color: #113253;
+  font-size: 1.25rem;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+.home > header {
+  grid-area: gridheader;
+}
+.home > nav {
+  grid-area: gridnav;
+}
+.home > main {
+  grid-area: gridmain;
+}
+.home > aside {
+  grid-area: gridaside;
+}
+.home > footer {
+  grid-area: gridfooter;
+}
+
+.home {
+  display: grid;
+  grid-template-areas:
+    "gridheader gridheader gridheader"
+    "gridnav gridnav gridnav"
+    "gridmain gridmain gridaside"
+    "gridfooter gridfooter gridfooter";
+}
+
+.home aside {
+  /*change to background image*/
+  padding: 0 1rem 1rem 1rem;
+  background-image: url("../images/background.avif");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.home main {
+  padding: 0 0.75rem 0.5rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#gallery img {
+  width: 100%;
+  height: 80%;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px dashed white; 
+  color: black;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Add CSS here for the form, table and gallery */
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+video {
+  width: 100%;+
+  display: block;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Add responsive CSS here */
+  html {
+    font: 20px/1.5 sans-serif;
+  }
+}
